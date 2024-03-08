@@ -10,7 +10,7 @@ import { HTTPOriginal } from '@awesome-cordova-plugins/http';
 export class AppComponent {
   text: string = ";"
   constructor(private http: HttpClient) {
-    http.get<any>("http://195.35.36.71:8080/api/usuario/1").subscribe(data => {
+    http.get<any>("https://elbuledomino.com:8080/api/usuario/1").subscribe(data => {
         this.text = data.nombre as string
         console.log(data)
     })
