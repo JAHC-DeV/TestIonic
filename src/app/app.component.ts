@@ -9,15 +9,15 @@ import { HTTPOriginal } from '@awesome-cordova-plugins/http';
 })
 export class AppComponent {
   text: string = ";"
-  constructor(private http: HTTPOriginal) {
-    /*http.get<any>("http://195.35.36.71:8080/api/usuario/1").subscribe(data => {
+  constructor(private http: HttpClient) {
+    http.get<any>("http://195.35.36.71:8080/api/usuario/1").subscribe(data => {
         this.text = data.nombre as string
         console.log(data)
-    })*/
-    http.get("http://195.35.36.71:8080/api/usuario/1", null, null).then(data => {
+    })
+   /* http.get("http://195.35.36.71:8080/api/usuario/1", null, null).then(data => {
       this.text = data.data.nombre as string;
     }).catch(err => {
       this.text = err;
-    })
+    })*/
   }
 }
